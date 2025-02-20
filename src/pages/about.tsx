@@ -41,7 +41,7 @@ export default function AboutPage() {
               About
             </Title>
             <p>
-              This site is a work in progress. Stats are refreshed hourly. Currently this is
+              This site is a work in progress. Stats might be refreshed hourly... Currently this is
               fetched:
             </p>
             <ul>
@@ -51,7 +51,7 @@ export default function AboutPage() {
             </ul>
             <p>I have plans to add:</p>
             <ul>
-              <li>More than top {RANKED_FETCH_AMOUNT}</li>
+              {/* <li>More than top {RANKED_FETCH_AMOUNT}</li>
               <li>Country pages</li>
               <li>
                 Global stats (top exp, top played characters, matches played, aggregated stats, etc)
@@ -59,14 +59,16 @@ export default function AboutPage() {
               <li>
                 A &quot;most played&quot;, or &quot;most experience&quot; feature to highlight
                 active players
-              </li>
+              </li> */}
+              <li>Nothing as this is a fork to get the site back up and running</li>
+              <li>And... also what I want when I want</li>
             </ul>
             <p>
-              If you have any feedback you can find me on the{' '}
+              The discord for the game is{' '}
               <Link target="_blank" href="https://www.discord.gg/OSFE">
                 Duelists of Eden
               </Link>{' '}
-              discord at Reese <code>(its.reese)</code> or DM me directly.
+              I can not be reached there, or anywhere...
             </p>
           </Grid.Col>
           <Grid.Col span={{ md: 4 }} offset={{ md: 2 }} className="changelog-wrapper">

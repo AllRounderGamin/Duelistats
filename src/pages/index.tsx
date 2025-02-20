@@ -24,7 +24,6 @@ export default function IndexPage(props: InferGetServerSidePropsType<typeof getS
   const [sortedData, setSortedData] = useState<PlayerInfo[]>(
     sortData(playersQuery.data?.pages.flatMap((page) => page.items) ?? [], { sortBy })
   );
-
   useEffect(() => {
     if (!playersQuery.isFetching && !playersQuery.isFetchingNextPage) {
       setSortedData(
@@ -42,12 +41,11 @@ export default function IndexPage(props: InferGetServerSidePropsType<typeof getS
   if (playersQuery.status === 'error') {
     return <Alert title="Error">Something went wrong while fetching the leaderboard.</Alert>;
   }
-
   return (
     <>
-      <Alert title="Welcome!" color={undefined} mb="xs">
+      {/*<Alert title="Welcome!" color={undefined} mb="xs">
         Website updates for season 2 and the new characters is coming soon! Stay tuned!
-      </Alert>
+      </Alert> */}
       <Box pos="relative">
         <LoadingOverlay
           visible={playersQuery.isFetching || playersQuery.isFetchingNextPage}

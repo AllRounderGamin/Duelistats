@@ -1,11 +1,11 @@
 import { Button, Grid, Menu, Space, Tabs, Text, rem } from '@mantine/core';
 import { IconActivity, IconAward, IconChartArrowsVertical, IconNumbers } from '@tabler/icons-react';
 import cx from 'classnames';
-import TopPlayerCard from '~/components/PlayerCard/TopPlayerCard';
-import PlayerList from '~/components/PlayerList/PlayerList';
 import { type PlayerInfo } from '~/types/Player';
 import { type PlayerListSortBy } from '~/utils/sortData';
 import PlayerCard from '../PlayerCard/PlayerCard';
+import TopPlayerCard from '../PlayerCard/TopPlayerCard';
+import PlayerList from '../PlayerList/PlayerList';
 import styles from './leaderboard.module.scss';
 
 export interface LeaderboardProps {

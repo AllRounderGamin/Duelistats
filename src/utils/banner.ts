@@ -35,6 +35,8 @@ import Maypul_BasicBanner from '~/assets/banners/Maypul_Basic-Banner.png';
 import Maypul_InkBanner from '~/assets/banners/Maypul_Ink-Banner.png';
 import Neera_BasicBanner from '~/assets/banners/Neera_Basic-Banner.png';
 import Neera_InkBanner from '~/assets/banners/Neera_Ink-Banner.png';
+import Perilla_BasicBanner from '~/assets/banners/Perilla_Basic-Banner.png';
+import Perilla_ClassicBanner from '~/assets/banners/Perilla_Classic-Banner.png';
 import Queen_BasicBanner from '~/assets/banners/Queen_Basic-Banner.png';
 import Queen_InkBanner from '~/assets/banners/Queen_Ink-Banner.png';
 import Random_BasicBanner from '~/assets/banners/Random_Basic-Banner.png';
@@ -61,6 +63,8 @@ import Shopkeeper_InkBanner from '~/assets/banners/Shopkeeper_Ink-Banner.png';
 import Terra_BasicBanner from '~/assets/banners/Terra_Basic-Banner.png';
 import Terra_ClassicBanner from '~/assets/banners/Terra_Classic-Banner.png';
 import Terra_InkBanner from '~/assets/banners/Terra_Ink-Banner.png';
+import Terrable_BasicBanner from '~/assets/banners/Terrable_Basic-Banner.png';
+import Terrable_ClassicBanner from '~/assets/banners/Terrable_Classic-Banner.png';
 import Violette_BasicBanner from '~/assets/banners/Violette_Basic-Banner.png';
 import Violette_ClassicBanner from '~/assets/banners/Violette_Classic-Banner.png';
 import Violette_InkBanner from '~/assets/banners/Violette_Ink-Banner.png';
@@ -390,6 +394,26 @@ export function getBanner(banner: Player['banner']): Banner | undefined {
     case 'Violette_Ink-Banner':
       return {
         bg: Violette_InkBanner,
+        position: 'center',
+      };
+    case 'Perilla_Basic-Banner':
+      return {
+        bg: Perilla_BasicBanner,
+        position: 'center',
+      };
+    case 'Perilla_Classic-Banner':
+      return {
+        bg: Perilla_ClassicBanner,
+        position: 'center',
+      };
+    case 'Terrable_Basic-Banner':
+      return {
+        bg: Terrable_BasicBanner,
+        position: 'center',
+      };
+    case 'Terrable_Classic-Banner':
+      return {
+        bg: Terrable_ClassicBanner,
         position: 'center',
       };
     default:

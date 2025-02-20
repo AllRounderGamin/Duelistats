@@ -45,26 +45,26 @@ export async function insertPlayers(
           (statistic) => statistic.Name === StatisticName.ProfileExperience.toString()
         )?.Value ?? 0,
       rank:
-        statisticName === StatisticName.OneVsOneRatingZero
+        statisticName === StatisticName.OneVsOneRatingTwo
           ? playerData.Position !== undefined
             ? playerData.Position + 1
             : null
           : null,
       rating: playerData.Profile.Statistics.find(
-        (statistic) => statistic.Name === StatisticName.OneVsOneRatingZero.toString()
+        (statistic) => statistic.Name === StatisticName.OneVsOneRatingTwo.toString()
       )?.Value,
       rankedWins:
         playerData.Profile.Statistics.find(
-          (statistic) => statistic.Name === StatisticName.OneVsOneRankedWinsZero.toString()
+          (statistic) => statistic.Name === StatisticName.OneVsOneRankedWinsTwo.toString()
         )?.Value ?? 0,
       rankedLosses:
         playerData.Profile.Statistics.find(
-          (statistic) => statistic.Name === StatisticName.OneVsOneRankedLossesZero.toString()
+          (statistic) => statistic.Name === StatisticName.OneVsOneRankedLossesTwo.toString()
         )?.Value ?? 0,
       rankedPeakRating: playerData.Profile.Statistics.find(
-        (statistic) => statistic.Name === StatisticName.OneVsOnePeakRatingZero.toString()
+        (statistic) => statistic.Name === StatisticName.OneVsOnePeakRatingTwo.toString()
       )?.Value,
-      season: 'Zero',
+      season: 'Two',
       unrankedWins:
         playerData.Profile.Statistics.find(
           (statistic) => statistic.Name === StatisticName.OneVsOneWins.toString()
@@ -74,7 +74,7 @@ export async function insertPlayers(
           (statistic) => statistic.Name === StatisticName.OneVsOneLosses.toString()
         )?.Value ?? 0,
       unrankedRating: playerData.Profile.Statistics.find(
-        (statistic) => statistic.Name === StatisticName.OneVsOneUnratedRatingZero.toString()
+        (statistic) => statistic.Name === StatisticName.OneVsOneUnratedRatingTwo.toString()
       )?.Value,
       continentCode: location.data.ContinentCode,
       countryCode: location.data.CountryCode,
@@ -125,6 +125,12 @@ export async function insertPlayers(
       )?.Value,
       shisoExp: playerData.Profile.Statistics.find(
         (statistic) => statistic.Name === CharacterStats.ShisoExperience.toString()
+      )?.Value,
+      terrableExp: playerData.Profile.Statistics.find(
+        (statistic) => statistic.Name === CharacterStats.TerrableExperience.toString()
+      )?.Value,
+      perillaExp: playerData.Profile.Statistics.find(
+        (statistic) => statistic.Name === CharacterStats.PerillaExperience.toString()
       )?.Value,
     } satisfies Prisma.PlayerCreateInput;
 

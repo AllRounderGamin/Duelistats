@@ -11,6 +11,7 @@ import {
   Hazel,
   Maypul,
   Neera,
+  Perilla,
   Queen,
   Reva,
   Saffron,
@@ -18,6 +19,7 @@ import {
   Shiso,
   Shopkeeper,
   Terra,
+  Terrable,
   Violette,
 } from '~/game/characters';
 import { db } from '~/server/db';
@@ -86,6 +88,8 @@ export const getServerSideProps = (async (context) => {
     topShopkeeper,
     topTerra,
     topViolette,
+    topTerrable,
+    topPerilla,
   ] = await db.$transaction([
     findManyQuery('chirettaExp'),
     findManyQuery('dreadwyrmExp'),
@@ -102,6 +106,8 @@ export const getServerSideProps = (async (context) => {
     findManyQuery('shopkeeperExp'),
     findManyQuery('terraExp'),
     findManyQuery('violetteExp'),
+    findManyQuery('terrableExp'),
+    findManyQuery('perillaExp'),
   ]);
 
   context.res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59');
@@ -168,6 +174,14 @@ export const getServerSideProps = (async (context) => {
         {
           players: topViolette,
           character: Violette,
+        },
+        {
+          players: topTerrable,
+          character: Terrable,
+        },
+        {
+          players: topPerilla,
+          character: Perilla,
         },
       ],
     },

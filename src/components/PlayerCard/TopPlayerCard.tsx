@@ -39,7 +39,16 @@ function TopPlayerCardDesktop({ player, ...props }: TopPlayerCardProps) {
   return (
     <Group className={cx(styles.card, props.className)}>
       <Box className={styles.bg}>
-        <NextImage src={topCharacter.banner.bg} alt="" width="400" objectFit="cover" />
+        <NextImage
+          src={topCharacter.banner.bg}
+          alt=""
+          width="400"
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+            objectFit: 'cover',
+          }}
+        />
       </Box>
       <Group className={styles.inner}>
         <Flex

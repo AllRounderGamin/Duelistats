@@ -32,8 +32,12 @@ export default function ProfileBanner({ player, rankInExperience }: ProfileBanne
         src={background?.bg ?? character.banner.bg}
         alt=""
         fill
-        objectFit="cover"
         objectPosition={background?.position ?? character.banner.position}
+        style={{
+          maxWidth: '100%',
+          // height: 'auto',
+          objectFit: 'cover',
+        }}
       />
       <Overlay
         gradient="linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 45%, rgba(0, 0, 0, 1) 100%)"

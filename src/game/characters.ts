@@ -8,6 +8,7 @@ import HarissaSplash from '~/assets/characters/Harissa_Splash_Transparent.png';
 import HazelSplash from '~/assets/characters/Hazel_Splash_transparent.png';
 import MaypulSplash from '~/assets/characters/Maypul_Splash_Transparent.png';
 import NeeraSplash from '~/assets/characters/Neera_Splash_Transparent.png';
+import PerillaSplash from '~/assets/characters/Perilla_Splash_Transparent.png';
 import QueenSplash from '~/assets/characters/Queen_Splash_Transparent.png';
 import RevaSplash from '~/assets/characters/Reva_Splash_Transparent.png';
 import SaffronSplash from '~/assets/characters/Saffron_Splash_Transparent.png';
@@ -15,6 +16,7 @@ import SelicySplash from '~/assets/characters/Selicy_Splash_Transparent.png';
 import ShisoSplash from '~/assets/characters/Shiso_Splash_Transparent.png';
 import ShopkeeperSplash from '~/assets/characters/Shopkeeper_Splash_Transparent.png';
 import TerraSplash from '~/assets/characters/Terra_Splash_Transparent.png';
+import TerrableSplash from '~/assets/characters/Terrable_Splash_Transparent.png';
 import VioletteSplash from '~/assets/characters/Violette_Splash_Transparent.png';
 import ChirettaIcon from '~/assets/icons/200px-DoE_Chiretta_IconSqu.png';
 import DreadwyrmIcon from '~/assets/icons/200px-DoE_Dreadwyrm_IconSqu.png';
@@ -23,6 +25,7 @@ import HarissaIcon from '~/assets/icons/200px-DoE_Harissa_IconSqu.png';
 import HazelIcon from '~/assets/icons/200px-DoE_Hazel_IconSqu.png';
 import MaypulIcon from '~/assets/icons/200px-DoE_Maypul_IconSqu.png';
 import NeeraIcon from '~/assets/icons/200px-DoE_Neera_IconSqu.png';
+import PerillaIcon from '~/assets/icons/200px-DoE_Perilla_IconSqu.png';
 import QueenIcon from '~/assets/icons/200px-DoE_Queen_IconSqu.png';
 import RevaIcon from '~/assets/icons/200px-DoE_Reva_IconSqu.png';
 import SaffronIcon from '~/assets/icons/200px-DoE_Saffron_IconSqu.png';
@@ -30,6 +33,7 @@ import SelicyIcon from '~/assets/icons/200px-DoE_Selicy_IconSqu.png';
 import ShisoIcon from '~/assets/icons/200px-DoE_Shiso_IconSqu.png';
 import ShopkeeperIcon from '~/assets/icons/200px-DoE_Shopkeeper_IconSqu.png';
 import TerraIcon from '~/assets/icons/200px-DoE_Terra_IconSqu.png';
+import TerrableIcon from '~/assets/icons/200px-DoE_Terrable_IconSqu.png';
 import VioletteIcon from '~/assets/icons/200px-DoE_Violette_IconSqu.png';
 import { getBanner, type Banner } from '~/utils/banner';
 // import ArenaBg from '~/assets/stages/Arena-bg.png';
@@ -169,6 +173,22 @@ export const Violette: Character = {
   statName: Prisma.PlayerScalarFieldEnum.violetteExp,
 };
 
+export const Terrable: Character = {
+  name: 'Terrable',
+  icon: TerrableIcon,
+  splash: TerrableSplash,
+  banner: getBackgroundImage('Terrable_Basic-Banner'),
+  statName: Prisma.PlayerScalarFieldEnum.terrableExp,
+};
+
+export const Perilla: Character = {
+  name: 'Perilla',
+  icon: PerillaIcon,
+  splash: PerillaSplash,
+  banner: getBackgroundImage('Perilla_Basic-Banner'),
+  statName: Prisma.PlayerScalarFieldEnum.perillaExp,
+};
+
 export const Characters: Character[] = [
   Chiretta,
   Dreadwyrm,
@@ -185,6 +205,8 @@ export const Characters: Character[] = [
   Shopkeeper,
   Terra,
   Violette,
+  Terrable,
+  Perilla,
 ];
 
 export function getTopCharacter(player: Player): Character {
@@ -205,6 +227,8 @@ export function getTopCharacter(player: Player): Character {
   const shopkeeper = player.shopkeeperExp;
   const terra = player.terraExp;
   const violette = player.violetteExp;
+  const terrable = player.terrableExp;
+  const perilla = player.perillaExp;
 
   // loop over characters and find the one with the highest experience
   for (const character of Characters) {
@@ -255,6 +279,12 @@ export function getTopCharacter(player: Player): Character {
         break;
       case 'Violette':
         exp = violette ?? 0;
+        break;
+      case 'Terrable':
+        exp = terrable ?? 0;
+        break;
+      case 'Perilla':
+        exp = perilla ?? 0;
         break;
     }
 

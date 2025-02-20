@@ -3,12 +3,12 @@ import { type Player } from '@prisma/client';
 import cx from 'classnames';
 import NextImage from 'next/image';
 import Link from 'next/link';
-import Flag from '~/components/Flag/Flag';
 import Tier from '~/components/Tier/Tier';
 import Winrate from '~/components/Winrate/Winrate';
 import { getTopCharacter } from '~/game/characters';
 import { getLevel } from '~/game/levels';
 import { getPeakRating } from '~/utils/peakRating';
+import Flag from '../Flag/Flag';
 import styles from './PlayerCard.module.scss';
 
 export interface PlayerCardProps extends React.ComponentProps<typeof Stack> {

@@ -21,7 +21,7 @@ export default function Search() {
   const router = useRouter();
   const [error, setError] = useState(false);
   const ref = useRef<HTMLInputElement>(null);
-  const lastFoundPlayers = useRef<RouterOutputs['player']['headerSearch']>();
+  const lastFoundPlayers = useRef<RouterOutputs['player']['headerSearch']>([]);
 
   useEffect(() => {
     if (headerSearchQuery.data) {

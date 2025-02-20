@@ -59,7 +59,7 @@ export async function updateDB() {
       }
     }
 
-    await getLeaderboardData(StatisticName.OneVsOneRatingZero, RANKED_FETCH_AMOUNT);
+    await getLeaderboardData(StatisticName.OneVsOneRatingTwo, RANKED_FETCH_AMOUNT);
     await getLeaderboardData(StatisticName.ProfileExperience, PROFILE_EXP_FETCH_AMOUNT);
     await getLeaderboardData(StatisticName.ChirettaExperience, CHARACTER_EXP_FETCH_AMOUNT);
     await getLeaderboardData(StatisticName.DreadwyrmExperience, CHARACTER_EXP_FETCH_AMOUNT);
@@ -76,6 +76,8 @@ export async function updateDB() {
     await getLeaderboardData(StatisticName.ShopkeeperExperience, CHARACTER_EXP_FETCH_AMOUNT);
     await getLeaderboardData(StatisticName.TerraExperience, CHARACTER_EXP_FETCH_AMOUNT);
     await getLeaderboardData(StatisticName.VioletteExperience, CHARACTER_EXP_FETCH_AMOUNT);
+    await getLeaderboardData(StatisticName.TerrableExperience, CHARACTER_EXP_FETCH_AMOUNT);
+    await getLeaderboardData(StatisticName.PerillaExperience, CHARACTER_EXP_FETCH_AMOUNT);
 
     await fetch(getUrl('/api/updated'), {
       method: 'POST',
