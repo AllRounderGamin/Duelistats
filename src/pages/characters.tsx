@@ -31,7 +31,7 @@ export default function CharactersPage({
   return (
     <>
       <Head>
-        <title>{`Characters | Stats of Eden`}</title>
+        <title>{`Characters | Duelistats`}</title>
         <meta
           name="description"
           content={`Top players for each character in the Duelists of Eden game`}

@@ -47,7 +47,7 @@ export default function Header() {
                 aria-label="Open menu"
               />
               <Anchor href="/" component={Link} className={styles.logo} underline="never" unstyled>
-                <Title size="h3">Stats of Eden</Title>
+                <Title size="h3">Duelistats</Title>
               </Anchor>
             </Flex>
           </Grid.Col>

@@ -29,10 +29,10 @@ export default function AboutPage() {
       `}</style>
       <div>
         <Head>
-          <title>About | Stats of Eden</title>
+          <title>About | Duelistats</title>
           <meta
             name="description"
-            content="About page for Stats of Eden, a website that provides statistics for the game Duelists of Eden"
+            content="About page for Duelistats, a website that provides statistics for the game Duelists of Eden, based on Stats of Eden by Reese"
           />
         </Head>
         <Grid>
@@ -40,10 +40,7 @@ export default function AboutPage() {
             <Title order={2} size="h1">
               About
             </Title>
-            <p>
-              This site is a work in progress. Stats might be refreshed hourly... Currently this is
-              fetched:
-            </p>
+            <p>This site is a work in progress. Stats refreshed hourly... Currently fetches:</p>
             <ul>
               <li>Top {RANKED_FETCH_AMOUNT} ranked players</li>
               <li>Top {PROFILE_EXP_FETCH_AMOUNT} experienced players</li>
@@ -60,15 +57,24 @@ export default function AboutPage() {
                 A &quot;most played&quot;, or &quot;most experience&quot; feature to highlight
                 active players
               </li> */}
-              <li>Nothing as this is a fork to get the site back up and running</li>
-              <li>And... also what I want when I want</li>
+              <li>Season 1 and 2 Toggle</li>
+              <li>Efficiency Changes</li>
+              <li>Character Page Reordering</li>
+              <li>Refine Season 2 Assets</li>
+              <li>Country Pages</li>
+              <li>Badge to Track Active Players</li>
             </ul>
             <p>
               The discord for the game is{' '}
               <Link target="_blank" href="https://www.discord.gg/OSFE">
                 Duelists of Eden
               </Link>{' '}
-              I can not be reached there, or anywhere...
+            </p>
+            <p>
+              Also check out{' '}
+              <Link target="-blank" href="https://www.decksofeden.org">
+                Decks of Eden
+              </Link>
             </p>
           </Grid.Col>
           <Grid.Col span={{ md: 4 }} offset={{ md: 2 }} className="changelog-wrapper">
@@ -77,6 +83,19 @@ export default function AboutPage() {
                 Changelog
               </Title>
               <Space h="xs" />
+              <ChangelogItem date=", 2025">
+                <List size="xs">
+                  <List.Item>
+                    Minor changes to change branding to Duelistats from Stats of Eden
+                  </List.Item>
+                </List>
+              </ChangelogItem>
+              <ChangelogItem date="February 20th, 2025">
+                <List size="xs">
+                  <List.Item>Port site to load season 2 data</List.Item>
+                  <List.Item>Increase char level cap</List.Item>
+                </List>
+              </ChangelogItem>
               <ChangelogItem date="July 6th, 2024">
                 <List size="xs">
                   <List.Item>Added &quot;Peak Rating&quot; sort</List.Item>

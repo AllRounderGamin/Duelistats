@@ -7,7 +7,7 @@ export default function Footer() {
       <Container component="header" my="xl">
         <Center>
           <Text size="xs">
-            Stats of Eden is not officially involved in producing or managing{' '}
+            Duelistats is not officially involved in producing or managing{' '}
             <Link target="_blank" href="https://www.duelistsofeden.com/">
               Duelists of Eden
             </Link>

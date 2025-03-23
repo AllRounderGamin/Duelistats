@@ -15,12 +15,12 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     <>
       <MantineProvider theme={theme} defaultColorScheme="dark">
         <Head>
-          <title>Stats of Eden</title>
+          <title>Duelistats</title>
           <meta
             name="description"
-            content="Stats of Eden is a website that provides statistics for the game Duelists of Eden"
+            content="Duelistats is a website that provides statistics for the game Duelists of Eden, based off of Stats of Eden by Reese"
           />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/icon.ico" />
         </Head>
         <Script
           defer
