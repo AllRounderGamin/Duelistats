@@ -88,6 +88,7 @@ export default function AboutPage() {
                   <List.Item>
                     Minor changes to change branding to Duelistats from Stats of Eden
                   </List.Item>
+                  <List.Item>Reorder Character Page to match game order</List.Item>
                 </List>
               </ChangelogItem>
               <ChangelogItem date="February 20th, 2025">

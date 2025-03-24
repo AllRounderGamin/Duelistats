@@ -116,28 +116,60 @@ export const getServerSideProps = (async (context) => {
     props: {
       top: [
         {
-          players: topChiretta,
-          character: Chiretta,
+          players: topSaffron,
+          character: Saffron,
         },
         {
-          players: topDreadwyrm,
-          character: Dreadwyrm,
-        },
-        {
-          players: topGunner,
-          character: Gunner,
-        },
-        {
-          players: topHarissa,
-          character: Harissa,
+          players: topSelicy,
+          character: Selicy,
         },
         {
           players: topHazel,
           character: Hazel,
         },
         {
-          players: topMaypul,
-          character: Maypul,
+          players: topTerra,
+          character: Terra,
+        },
+        {
+          players: topShiso,
+          character: Shiso,
+        },
+        {
+          players: topViolette,
+          character: Violette,
+        },
+        {
+          players: topReva,
+          character: Reva,
+        },
+        {
+          players: topChiretta,
+          character: Chiretta,
+        },
+        {
+          players: topGunner,
+          character: Gunner,
+        },
+        {
+          players: topShopkeeper,
+          character: Shopkeeper,
+        },
+        {
+          players: topHarissa,
+          character: Harissa,
+        },
+        {
+          players: topPerilla,
+          character: Perilla,
+        },
+        {
+          players: topTerrable,
+          character: Terrable,
+        },
+        {
+          players: topDreadwyrm,
+          character: Dreadwyrm,
         },
         {
           players: topNeera,
@@ -148,40 +180,8 @@ export const getServerSideProps = (async (context) => {
           character: Queen,
         },
         {
-          players: topReva,
-          character: Reva,
-        },
-        {
-          players: topSaffron,
-          character: Saffron,
-        },
-        {
-          players: topSelicy,
-          character: Selicy,
-        },
-        {
-          players: topShiso,
-          character: Shiso,
-        },
-        {
-          players: topShopkeeper,
-          character: Shopkeeper,
-        },
-        {
-          players: topTerra,
-          character: Terra,
-        },
-        {
-          players: topViolette,
-          character: Violette,
-        },
-        {
-          players: topTerrable,
-          character: Terrable,
-        },
-        {
-          players: topPerilla,
-          character: Perilla,
+          players: topMaypul,
+          character: Maypul,
         },
       ],
     },
