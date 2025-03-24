@@ -59,8 +59,6 @@ export default function AboutPage() {
               </li> */}
               <li>Season 1 and 2 Toggle</li>
               <li>Efficiency Changes</li>
-              <li>Character Page Reordering</li>
-              <li>Refine Season 2 Assets</li>
               <li>Country Pages</li>
               <li>Badge to Track Active Players</li>
             </ul>
