@@ -32,11 +32,11 @@ export default function ProfileBanner({ player, rankInExperience }: ProfileBanne
         src={background?.bg ?? character.banner.bg}
         alt=""
         fill
-        objectPosition={background?.position ?? character.banner.position}
         style={{
           maxWidth: '100%',
           // height: 'auto',
           objectFit: 'cover',
+          objectPosition: background?.position ?? character.banner.position,
         }}
       />
       <Overlay

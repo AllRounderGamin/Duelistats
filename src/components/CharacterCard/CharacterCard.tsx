@@ -16,12 +16,12 @@ export default function CharacterCard({ players, character }: TopCharacterPlayer
         <Image
           src={character.banner.bg}
           alt={character.name}
-          objectPosition={character.banner.position}
           fill
           style={{
             maxWidth: '100%',
             // height: 'auto',
             objectFit: 'cover',
+            objectPosition: character.banner.position,
           }}
         />
       </Card.Section>
