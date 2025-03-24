@@ -29,7 +29,7 @@ export default function CharacterCard({ players, character }: TopCharacterPlayer
         {character.name}
       </Text>
       <Card.Section>
-        <Table className={stylesPlayerList.table} striped highlightOnHover>
+        <Table className={styles.table} striped highlightOnHover horizontalSpacing={'xs'}>
           <Table.Thead>
             <Table.Tr>
               <Table.Th className={styles.rank}></Table.Th>
@@ -89,7 +89,7 @@ function CharacterCardRow({
   return (
     <Table.Tr key={player.playFabId} className={stylesPlayerList.row} onClick={handleRowClick}>
       <Table.Td className={styles.rank}>{rank}</Table.Td>
-      <Table.Td>
+      <Table.Td className={styles.level}>
         <Tooltip label={`${characterExp?.toLocaleString()} character exp`}>
           <Text size="sm">Lv. {characterLvl}</Text>
         </Tooltip>

@@ -1,5 +1,13 @@
 @use '~/sass/mantine' as *;
 
+.table {
+  @include smaller-than($mantine-breakpoint-sm) {
+    .desktopOnly {
+      display: none;
+    }
+  }
+}
+
 .card {
   background-color: var(--mantine-color-body);
 }
@@ -10,10 +18,20 @@
 
 .name {
   color: currentColor;
+  max-width: 10em !important;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .rank {
   font-weight: bold;
   padding-right: 0;
   font-size: 0.85em;
+  width: 2em;
+}
+
+.level {
+  width: 5em;
 }

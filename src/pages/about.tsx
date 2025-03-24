@@ -83,14 +83,15 @@ export default function AboutPage() {
                 Changelog
               </Title>
               <Space h="xs" />
-              <ChangelogItem date=", 2025">
+              <ChangelogItem date="March 24th, 2025">
                 <List size="xs">
                   <List.Item>
                     {' '}
-                    Minor changes to change branding to Duelistats from Stats of Eden
+                    Minor changes to change branding to Duelistats from Stats of Eden{' '}
                   </List.Item>
                   <List.Item>Reorder Character Page to match game order</List.Item>
                   <List.Item>Gave season 2 character icons white border</List.Item>
+                  <List.Item>Fixed character page name overflow</List.Item>
                 </List>
               </ChangelogItem>
               <ChangelogItem date="February 20th, 2025">

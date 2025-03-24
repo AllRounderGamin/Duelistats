@@ -3,7 +3,6 @@ import '@mantine/core/styles.css';
 import { PagesProgressBar as ProgressBar } from 'next-nprogress-bar';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
-import Script from 'next/script';
 import AuroraHostsLogo from '~/assets/aurorahosts.png';
 import Footer from '~/components/Footer/Footer';
 import Header from '~/components/Header/Header';
@@ -22,11 +21,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           />
           <link rel="icon" href="/icon.ico" />
         </Head>
-        <Script
-          defer
-          src="https://umami.statsofeden.com/script.js"
-          data-website-id="f483386f-0d5c-4fbe-92da-2aafa77334cb"
-        />
         <Header />
         <main>
           <Container my="md">
