@@ -163,13 +163,19 @@ const profileLevels = [
 export function getLevel(exp: number, type: 'profile' | 'character'): number {
   if (type === 'character') {
     return Math.floor(Math.sqrt(exp / 100)) | 0;
+  } else if (type === 'profile') {
+    let left = 0;
+    let right = profileLevels.length - 1;
+    while (left <= right) {
+      const middle = Math.floor((right + left) / 2);
+      const currentCheck = profileLevels[middle] ?? 66064012;
+      if (currentCheck < exp) {
+        left = middle + 1;
+      } else if (currentCheck > exp) {
+        right = middle - 1;
+      }
+    }
+    return left - 1;
   }
-
-  // I have a profileLevel array that at level index i it has the exp required to reach that level
-  // Given an exp: number, I want to find the level that has the exp required to reach that level
-
-  const lesser = profileLevels.filter(function (dec) {
-    return dec < exp;
-  });
-  return lesser.length - 1;
+  return -1;
 }
